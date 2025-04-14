@@ -25,36 +25,6 @@
       opacity: 0;
     }
 
-    .rocket-container {
-      position: absolute;
-      top: 9rem;
-      right: 1.5rem;
-      overflow: hidden;
-    }
-
-    .rocket-slide {
-      display: flex;
-      align-items: center;
-      transform: translateX(-150%);
-      opacity: 0;
-      animation: rocketSlide 2s ease-out 1s forwards;
-    }
-
-    .rocket-fire {
-      width: 10px;
-      height: 20px;
-      margin-left: -6px;
-      background: radial-gradient(circle, #ff9800, #ff5722);
-      border-radius: 50%;
-      animation: flicker 0.2s infinite alternate;
-    }
-
-    .name-fade {
-      margin-left: 0.75rem;
-      opacity: 0;
-      animation: nameFade 1s ease-in 3s forwards;
-    }
-
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -64,43 +34,20 @@
       0% { transform: scale(0.5); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
-
-    @keyframes rocketSlide {
-      0% { transform: translateX(-150%); opacity: 0; }
-      100% { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes nameFade {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    @keyframes flicker {
-      0% { transform: scaleY(1); opacity: 0.7; }
-      100% { transform: scaleY(1.3); opacity: 1; }
-    }
   </style>
 </head>
 <body class="font-sans">
   <header class="bg-white/10 shadow-md p-6 fade-in relative backdrop-blur-md rounded-b-xl">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl font-bold text-white">Hello, I'm a CS Student 👋</h1>
+    <div class="max-w-4xl mx-auto relative">
+      <h1 class="text-3xl font-bold text-white flex items-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/254/254638.png" alt="PC Icon" class="w-8 h-8 mr-3">
+        Hello, I'm SUMADWA KULKARNI 👋
+      </h1>
       <p class="text-lg mt-1 text-blue-200">4th Semester @ SJBIT | VTU</p>
-    </div>
 
-    <!-- Profile Photo -->
-    <div class="absolute top-4 right-6">
-      <img src="me.jpg" alt="My Photo" class="w-28 h-28 object-cover rounded-full border-4 border-white shadow-lg pop-up">
-    </div>
-
-    <!-- Rocket & Name Animation -->
-    <div class="rocket-container">
-      <div class="rocket-slide">
-        <div class="relative">
-          <img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" alt="Rocket" class="w-6 h-6">
-          <div class="rocket-fire absolute bottom-[-8px] left-1/2 transform -translate-x-1/2"></div>
-        </div>
-        <span class="text-white font-bold text-lg name-fade">SUMADWA KULKARNI</span>
+      <!-- Profile Photo -->
+      <div class="absolute top-0 right-0">
+        <img src="me.jpg" alt="My Photo" class="w-28 h-28 object-cover rounded-full border-4 border-white shadow-lg pop-up">
       </div>
     </div>
   </header>
@@ -142,9 +89,9 @@
     </section>
 
     <section class="flex justify-center items-center gap-6 mt-6 md:col-span-2">
-      <a href="tel:8277188531" class="text-white text-2xl hover:text-blue-400"><i class="fas fa-phone"></i> 📞</a>
-      <a href="mailto:sumadwakulkarni@gmail.com" class="text-white text-2xl hover:text-blue-400"><i class="fas fa-envelope"></i> ✉️</a>
-      <a href="https://instagram.com/sumadwa.kulkarni" target="_blank" class="text-white text-2xl hover:text-pink-400"><i class="fab fa-instagram"></i> 📷</a>
+      <a href="tel:8277188531" class="text-white text-2xl hover:text-blue-400">📞</a>
+      <a href="mailto:sumadwakulkarni@gmail.com" class="text-white text-2xl hover:text-blue-400">✉️</a>
+      <a href="https://instagram.com/sumadwa.kulkarni" target="_blank" class="text-white text-2xl hover:text-pink-400">📷</a>
     </section>
   </main>
 
