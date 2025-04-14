@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       background-color: #0a192f;
-      background-image: url('https://www.transparenttextures.com/patterns/circuit-board.png');
+      background-image: url('engineering-doodle.png'); /* Place this image in your repo */
       background-repeat: repeat;
       background-attachment: fixed;
       color: #e0e0e0;
     }
+
     .fade-in {
       animation: fadeIn 2s ease-in-out;
     }
@@ -23,19 +24,26 @@
       opacity: 0;
     }
 
+    .animate-rocket-fly {
+      animation: rocketFly 2s ease-out 1s forwards;
+      transform: translateX(-150%);
+      opacity: 0;
+    }
+
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
     @keyframes popUp {
       0% { transform: scale(0.5); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes rocketFly {
+      0% { transform: translateX(-150%); opacity: 0; }
+      30% { opacity: 1; }
+      100% { transform: translateX(0); opacity: 1; }
     }
   </style>
 </head>
@@ -45,8 +53,16 @@
       <h1 class="text-3xl font-bold text-white">Hello, I'm a CS Student 👋</h1>
       <p class="text-lg mt-1 text-blue-200">4th Semester @ SJBIT | VTU</p>
     </div>
+
+    <!-- Profile Photo -->
     <div class="absolute top-4 right-6">
       <img src="me.jpg" alt="My Photo" class="w-28 h-28 object-cover rounded-full border-4 border-white shadow-lg pop-up">
+    </div>
+
+    <!-- Rocket & Name Animation -->
+    <div class="absolute top-36 right-6 flex items-center space-x-2 animate-rocket-fly">
+      <img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" alt="Rocket" class="w-6 h-6">
+      <span class="text-white font-bold text-lg">SUMADWA KULKARNI</span>
     </div>
   </header>
 
@@ -89,28 +105,16 @@
     </section>
 
     <section class="mb-8 slide-up">
-      <h2 class="text-2xl font-semibold text-white mb-2">Certificates</h2>
-      <div class="p-4 bg-white/10 backdrop-blur-md rounded-xl fade-in">
-        <h3 class="text-xl font-bold text-white">Complete Python and Java Programming BUNDLE</h3>
-        <p>Issued by Udemy on Jan 31, 2025</p>
-        <a href="https://drive.google.com/file/d/19e2g4fOqRM84JoPF3fKdeNRGQB6lyMAC/view?usp=drive_link" 
-           target="_blank" 
-           class="text-blue-400 underline">
-          View Certificate
-        </a>
-      </div>
-    </section>
-
-    <section class="mb-8 slide-up">
       <h2 class="text-2xl font-semibold text-white mb-2">Contact</h2>
-      <p>Email: <a href="mailto:sumadwakulkarni@gmail.com" class="text-blue-400 underline">sumadwakulkarni@gmail.com </a></p>
-      <p>GitHub: <a href="#" class="text-blue-400 underline">github.com/sumadwakulkarni008.github.io </a></p>
-      <a href="tel:+918277188531" class="text-blue-400 underline">+91 8277188531</a>
+      <p>Email: <a href="mailto:your-email@example.com" class="text-blue-400 underline">your-email@example.com</a></p>
+      <p>Phone: <a href="tel:+919876543210" class="text-blue-400 underline">+91 98765 43210</a></p>
+      <p>GitHub: <a href="#" class="text-blue-400 underline">github.com/yourusername</a></p>
+      <p>LinkedIn: <a href="#" class="text-blue-400 underline">linkedin.com/in/yourprofile</a></p>
     </section>
   </main>
 
   <footer class="bg-white/10 text-center py-4 shadow-inner fade-in backdrop-blur-md text-white">
-    <p>© 2025 Your Name. All rights reserved.</p>
+    <p>© 2025 SUMADWA KULKARNI. All rights reserved.</p>
   </footer>
 </body>
 </html>
