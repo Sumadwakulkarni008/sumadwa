@@ -8,9 +8,10 @@
   <style>
     body {
       background-color: #0a192f;
-      background-image: url('engineering-doodle.png'); /* Place this image in your repo */
+      background-image: url('engineering-doodle.png');
       background-repeat: repeat;
       background-attachment: fixed;
+      background-size: contain;
       color: #e0e0e0;
     }
 
@@ -24,10 +25,25 @@
       opacity: 0;
     }
 
-    .animate-rocket-fly {
-      animation: rocketFly 2s ease-out 1s forwards;
+    .rocket-container {
+      position: absolute;
+      top: 9rem;
+      right: 1.5rem;
+      overflow: hidden;
+    }
+
+    .rocket-slide {
+      display: flex;
+      align-items: center;
       transform: translateX(-150%);
       opacity: 0;
+      animation: rocketSlide 2s ease-out 1s forwards;
+    }
+
+    .name-fade {
+      margin-left: 0.5rem;
+      opacity: 0;
+      animation: nameFade 1s ease-in 3s forwards;
     }
 
     @keyframes fadeIn {
@@ -40,10 +56,14 @@
       100% { transform: scale(1); opacity: 1; }
     }
 
-    @keyframes rocketFly {
+    @keyframes rocketSlide {
       0% { transform: translateX(-150%); opacity: 0; }
-      30% { opacity: 1; }
       100% { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes nameFade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -59,10 +79,12 @@
       <img src="me.jpg" alt="My Photo" class="w-28 h-28 object-cover rounded-full border-4 border-white shadow-lg pop-up">
     </div>
 
-    <!-- Rocket & Name Animation -->
-    <div class="absolute top-36 right-6 flex items-center space-x-2 animate-rocket-fly">
-      <img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" alt="Rocket" class="w-6 h-6">
-      <span class="text-white font-bold text-lg">SUMADWA KULKARNI</span>
+    <!-- Rocket & Name Separate Animation -->
+    <div class="rocket-container">
+      <div class="rocket-slide">
+        <img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" alt="Rocket" class="w-6 h-6">
+        <span class="text-white font-bold text-lg name-fade">SUMADWA KULKARNI</span>
+      </div>
     </div>
   </header>
 
@@ -97,6 +119,13 @@
       </div>
     </section>
 
+    <section class="mb-8 slide-up">
+      <h2 class="text-2xl font-semibold text-white mb-2">Education</h2>
+      <p><strong>SJBIT</strong>, Bengaluru<br>
+      B.E. in Computer Science – 4th Semester<br>
+      Affiliated to VTU</p>
+    </section>
+
   <section class="mb-8 slide-up">
   <h2 class="text-2xl font-semibold text-white mb-2">Contact</h2>
 
@@ -120,6 +149,7 @@
     <a href="https://www.instagram.com/sumadwa.kulkarni" target="_blank" class="text-pink-400 underline">@sumadwa.kulkarni</a>
   </p>
 </section>
+  
   </main>
 
   <footer class="bg-white/10 text-center py-4 shadow-inner fade-in backdrop-blur-md text-white">
