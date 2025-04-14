@@ -41,16 +41,16 @@
     }
 
     .rocket-fire {
-      width: 8px;
-      height: 16px;
-      background: radial-gradient(circle, #ff7e00, #ff0000);
-      margin-left: 4px;
+      width: 10px;
+      height: 20px;
+      margin-left: -6px;
+      background: radial-gradient(circle, #ff9800, #ff5722);
       border-radius: 50%;
-      animation: flicker 0.3s infinite alternate;
+      animation: flicker 0.2s infinite alternate;
     }
 
     .name-fade {
-      margin-left: 0.5rem;
+      margin-left: 0.75rem;
       opacity: 0;
       animation: nameFade 1s ease-in 3s forwards;
     }
@@ -76,7 +76,7 @@
     }
 
     @keyframes flicker {
-      0% { transform: scaleY(1); opacity: 0.6; }
+      0% { transform: scaleY(1); opacity: 0.7; }
       100% { transform: scaleY(1.3); opacity: 1; }
     }
   </style>
@@ -93,11 +93,13 @@
       <img src="me.jpg" alt="My Photo" class="w-28 h-28 object-cover rounded-full border-4 border-white shadow-lg pop-up">
     </div>
 
-    <!-- Rocket & Name Separate Animation -->
+    <!-- Rocket & Name Animation -->
     <div class="rocket-container">
       <div class="rocket-slide">
-        <img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" alt="Rocket" class="w-6 h-6">
-        <div class="rocket-fire"></div>
+        <div class="relative">
+          <img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" alt="Rocket" class="w-6 h-6">
+          <div class="rocket-fire absolute bottom-[-8px] left-1/2 transform -translate-x-1/2"></div>
+        </div>
         <span class="text-white font-bold text-lg name-fade">SUMADWA KULKARNI</span>
       </div>
     </div>
@@ -134,7 +136,14 @@
       </div>
     </section>
 
-<section class="mb-8 slide-up">
+    <section class="mb-8 slide-up">
+      <h2 class="text-2xl font-semibold text-white mb-2">Education</h2>
+      <p><strong>SJBIT</strong>, Bengaluru<br>
+      B.E. in Computer Science – 4th Semester<br>
+      Affiliated to VTU</p>
+    </section>
+
+   <section class="mb-8 slide-up">
   <h2 class="text-2xl font-semibold text-white mb-2">Contact</h2>
 
   <p class="flex items-center space-x-2">
@@ -164,4 +173,3 @@
   </footer>
 </body>
 </html>
-
